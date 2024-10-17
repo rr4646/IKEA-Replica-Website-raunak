@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-black text-white">
+        <div class="container mx-auto p-2 flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div class="flex items-center space-x-4 mb-2 sm:mb-0">
+                <span>IN</span>
+                <a href="#" class="hover:underline flex items-center space-x-1">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </a>
+            </div>
+            <div>
+                <a href="#" class="hover:underline">This festive season get up to 70% off! Shop now!</a>
+            </div>
+            <div class="flex items-center space-x-4 mt-2 sm:mt-0">
+                <a href="#" class="hover:underline flex items-center space-x-1">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Enter postal code</span>
+                </a>
+                <a href="#" class="hover:underline flex items-center space-x-1">
+                    <i class="fas fa-store"></i>
+                    <span>Select store</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-6">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="images/Ikea_logo.svg.png" alt="IKEA Logo" class="h-8">
+            </div>
+    
+            <!-- Search Bar with Camera Icon -->
+            <div class="flex-1 mx-6">
+                <div class="relative w-full max-w-lg">
+                    <input type="text" id="search-input" placeholder="What are you looking for?" class="w-full p-2 pl-10 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring focus:border-blue-500">
+                    
+                    <!-- Search Icon -->
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.15-7.65a8 8 0 11-16 0 8 8 0 0116 0z" />
+                        </svg>
+                    </div>
+    
+                    <!-- Camera Icon -->
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" id="camera-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h3l2-3h8l2 3h3v13H3V7z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Icons and User Actions -->
+            <div class="flex space-x-4 mt-2 md:mt-0">
+                <a href="#" class="text-black-600 hover:text-blue-600"><strong>Hey! Log in</strong></a>
+                <a href="#" class="text-black-600 hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-black-600 hover:text-blue-600">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        class="text-black-600 hover:text-blue-600"
+  
+>
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 3h14l-1.2 7H8.2l-.4 2h11.6M7 3L6.2 1.6A1 1 0 005.3 1H2m0 0a1 1 0 00-1 1v2h2M21 19a2 2 0 100 4 2 2 0 000-4zm-3 0a2 2 0 100 4 2 2 0 000-4zM5 19a2 2 0 100 4 2 2 0 000-4z"
+                         />
+                  </svg>
+
+                </a>
+            </div>
+        </div>
+       
+        
+
+     <!-- Parent Container for the Navigation Bar and Section Content -->
+
+     <div class="bg-white-100 py-2 relative">
+        <!-- Container for the Navigation Buttons -->
+        <div class="container mx-auto flex flex-wrap space-x-8 justify-center md:justify-start">
+            <!-- Navigation Buttons (Shop Products, Shop by Rooms, etc.) -->
+            <div class="flex lg:space-x-4 mb-4">
+                <button onclick="toggleSection('shop-products')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-shopping-cart mr-2"></i> Shop products
+                </button>
+                <button onclick="toggleSection('shop-by-rooms')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-home mr-2"></i> Shop by rooms
+                </button>
+                <button onclick="toggleSection('offers')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-tag mr-2"></i> Offers
+                </button>
+                <button onclick="toggleSection('new-at-ikka')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-star mr-2"></i> New at IKEA
+                </button>
+                <button onclick="toggleSection('ikka-business')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-briefcase mr-2"></i> IKEA for Business
+                </button>
+                <button onclick="toggleSection('customer-service')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-headset mr-2"></i> Customer Service
+                </button>
+                <button onclick="toggleSection('ideas-trends')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-lightbulb mr-2"></i> Tips, Ideas & Trends
+                </button>
+                <button onclick="toggleSection('more')" class="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                    <i class="fas fa-ellipsis-h mr-2"></i> More
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Section Contents -->
+    <div id="content-section" class="container mx-auto flex flex-wrap space-x-8 justify-center md:justify-start">
+        <!-- Default "Shop Products" Content -->
+        <div id="shop-products" class="section-content container mx-auto py-6 ">
+            <div class="fcontainer mx-auto py-4 overflow-x-auto whitespace-nowrap space-x-8 flex relative" id="shopproducts-container">
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/OFFER 6.avif" alt="Festive offer" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Festive offer</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/storage-organisation-st001.avif" alt="Storage & organization" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Storage</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/furniture-fu001.avif" alt="Furniture" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Furniture</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/beds-mattresses-bm001.avif" alt="Beds & mattresses" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Beds & mattresses</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/textiles-tl001.avif" alt="Home textiles" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Home textiles</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/decoration-de001.avif" alt="Decoration" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Decoration</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/lighting-li001.avif" alt="Lighting" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Lighting</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/kitchenware-tableware-kt001.webp" alt="Kitchenware & tableware" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Kitchenware</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/bathroom-products-ba001.avif" alt="Bathroom products" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Bathroom products</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/baby-children-bc001.avif" alt="Baby & Children" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Baby & Children</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/laundry-cleaning-lc001.avif" alt="Laundry & cleaning" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Laundry & cleaning</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/outdoor-products-od001.avif" alt="Outdoor products" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Outdoor products</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/pots-plants-pp001.avif" alt="Pots & Plants" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Pots & Plants</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/kitchen-appliances-ka001.avif" alt="Modular kitchen" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Modular kitchen</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/food-beverages-fb001.avif" alt="Food & beverages" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Food & beverages</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/home-improvement-hi001.webp" alt="Home improvement" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Home improvement</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/smart-home-hs001.webp" alt="Smart home" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Smart home</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/rugs-mats-flooring-rm001.avif" alt="Rugs & mats" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Rugs & mats</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+        <!-- Default "Shop by Rooms" Content -->
+        <div id="shop-by-rooms" class="section-content container mx-auto py-6"> <!-- Reduced py-12 to py-6 -->
+            <div class="flex whitespace-nowrap py-2 lg:space-x-4 mb-4 relative">
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105"> <!-- Reduced width -->
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md"> <!-- Reduced height -->
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+                <div class="flex-shrink-0 w-28 p-2 transition-transform transform hover:scale-105">
+                    <img src="images/living room.jpg" alt="Living Room" class="mx-auto w-full h-24 object-cover rounded-md shadow-md">
+                    <p class="text-center text-sm mt-2">Living Room</p>
+                </div>
+            </div>
+        </div>
+        
+                <!-- Repeat similar structure for other rooms -->
+            </div>
+        </div>
+    
+        <div id="offers" class="section-content hidden py-4 text-left bg-white rounded-md shadow-md container mx-auto mt-2">
+            <p class="text-gray-700 font-medium text-base mb-2">Festive Offers</p>
+            <p class="text-gray-700 font-medium text-base mb-2">All offers</p>
+            <p class="text-gray-700 font-medium text-base mb-2">New lower price</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Our lowest price</p>
+        </div>
+        
+        <div id="new-at-ikka" class="section-content hidden py-4 text-left bg-white rounded-md shadow-md container mx-auto mt-2">
+            <p class="text-gray-700 font-medium text-base mb-2">Nytillverkad retro collection</p>
+            <p class="text-gray-700 font-medium text-base mb-2">UTSADD pet collection</p>
+            <p class="text-gray-700 font-medium text-base mb-2">HOSTAGILLE fall collection</p>
+            <p class="text-gray-700 font-medium text-base mb-2">See all collections</p>
+        </div>
+        
+        <div id="ikka-business" class="section-content hidden py-4 text-left bg-white rounded-md shadow-md container mx-auto mt-2">
+            <p class="text-gray-700 font-medium text-base mb-2">Bulk order</p>
+            <p class="text-gray-700 font-medium text-base mb-2">IKEA Business network</p>
+            <p class="text-gray-700 font-medium text-base mb-2">IKEA business testimonials</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Business brochure</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Architects and Interior design</p>
+            <p class="text-gray-700 font-medium text-base mb-2">SME Climate hub</p>
+        </div>
+        
+        <div id="customer-service" class="section-content hidden py-4 text-left bg-white rounded-md shadow-md container mx-auto mt-2">
+            <p class="text-gray-700 font-medium text-base mb-2">Contact us</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Services</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Track & manage your order</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Shop by phone</p>
+            <p class="text-gray-700 font-medium text-base mb-2">How to shop</p>
+            <p class="text-gray-700 font-medium text-base mb-2">FAQs</p>
+        </div>
+        
+        <div id="ideas-trends" class="section-content hidden py-4 text-left bg-white rounded-md shadow-md container mx-auto mt-2">
+            <p class="text-gray-700 font-medium text-base mb-2">Storage tips & ideas</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Lifestyle trends</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Gift ideas</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Curated by me</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Everyday rituals</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Styles</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Gallery</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Homes</p>
+        </div>
+        
+        <div id="more" class="section-content hidden py-4 text-left bg-white rounded-md shadow-md container mx-auto mt-2">
+            <p class="text-gray-700 font-medium text-base mb-2">Currently at IKEA</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Join IKEA Family</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Bulk orders</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Our stores</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Swedish Restaurant</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Download the IKEA app</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Design your room</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Sustainable living</p>
+            <p class="text-gray-700 font-medium text-base mb-2">Design your space with AI-powered Kreativ</p>
+            <p class="text-gray-700 font-medium text-base mb-2">365 days of return and exchange now available</p>
+        </div>
+        
+    
+
+    <!-- offer layout-->
+
+    <div class="container mx-auto px-4 py-16 relative">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="rounded-lg p-8 text-white relative shadow-lg" style="background-color: #7a3030;">
+                <!-- Festive Offer Heading -->
+                <h2 class="text-5xl font-extrabold mb-6 text-center tracking-wide">
+                    Enjoy Festive <br> Offers 🎉
+                </h2>
+            
+                <!-- Offer Details -->
+                <p class="text-xl mb-6 text-center">
+                    Get up to <span class="font-bold">70% off*</span> till <span class="font-bold">3rd Nov 2024</span>
+                </p>
+                
+                <!-- Offer Validity -->
+                <p class="text-lg mb-6 text-center">
+                    Offer valid for <span class="font-bold">IKEA Family</span> members.
+                </p>
+            
+                <!-- Call to Action Button -->
+                <div class="flex justify-center">
+                    <button class="bg-white text-black hover:bg-red-500 hover:text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img src="images/gaming desk.jpg" alt="Gaming Desk" class="rounded-lg w-full">
+                <div class="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg">HUVUDSPELARE</h3>
+                    <p class="text-sm">Gaming desk</p>
+                    <p class="text-xl font-bold">Rs. 7,990</p>
+                    <p class="text-xs text-gray-500 line-through">Rs . 12,990</p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="images/bookshelf.jpg" alt="Bookshelf" class="rounded-lg w-full">
+                <div class="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg">BJURSTA</h3>
+                    <p class="text-sm">Bookshelf</p>
+                    <p class="text-xl font-bold">Rs. 3,990</p>
+                    <p class="text-xs text-gray-500 line-through">Rs. 6,990</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+<!-- Offers and Cat. -->
+
+
+<div class="container mx-auto px-4 py-16 relative">
+    <!-- Heading -->
+    <h2 class="text-2xl font-bold mb-6">Enjoy upto 70% off* across categories</h2>
+
+    <!-- Carousel Container -->
+    <div class="relative">
+        <!-- Scrollable Content in a flex slider -->
+        <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="slider-container">
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Beds</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Wardrobes</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Tables</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Home textiles</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Lighting</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Candle holders <br> & candles</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Storage boxes <br> & baskets</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Flower pots <br> & planters</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Kitchenware &<br> tableware</span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="min-w-[200px] max-w-[200px] h-[280px] flex flex-col justify-between text-white p-4" style="background-color: #7a3030;">
+                <span class="font-bold text-lg">Air purifiers </span>
+                <button class="bg-white p-2 rounded-full self-center">
+                    <svg class="h-4 w-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Arrow for Sliding -->
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700" onclick="Scrollslider()">
+            →
+        </button>
+    </div>
+</div>
+
+
+<!--delivery banner-->
+
+<div class="container mx-auto px-4 py-16 relative bg-[#7a3030] text-white">
+    <!-- Banner Content -->
+    <div class="flex flex-col md:flex-row justify-between items-center">
+        <!-- Left Text Section -->
+        <div class="text-center md:text-left md:flex-1">
+            <h2 class="text-2xl md:text-4xl font-bold">Delivery price starts at Rs. 49*</h2>
+        </div>
+        <!-- Right Icon and Pricing Section -->
+        <div class="flex flex-col md:flex-row items-center mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Truck Icon (Center aligned, no background) -->
+            <div class="flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-16 h-16 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a4 4 0 11-8 0 4 4 0 018 0zm12-7v6h-6V6a2 2 0 00-2-2H4a2 2 0 00-2 2v10h2m16 0a4 4 0 11-8 0h8zM6 10h4m4 0h4l3 3" />
+                </svg>
+            </div>
+            <!-- Pricing Information -->
+            <div class="text-center md:text-right">
+                <p class="line-through text-sm md:text-base">Delivery Services starting at ₹99</p>
+                <p class="text-3xl md:text-4xl font-bold">₹49*</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- offers 2-->
+<div class="container mx-auto px-4 py-16 relative">
+    <!-- Horizontal Scrollable Cards Container -->
+    <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="card-container">
+        <!-- Card 1 -->
+        <div class="w-80 h-[500px] bg-orange-500 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/STRANDMON.jpg" alt="STRANDMON Wing Chair" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">All things festive</h2>
+                <p class="text-white mb-4">Bring in celebration at home <br>with the perfect festive finds.</p>
+                <a href="#" class="bg-white text-orange-500 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-80 h-[500px] bg-blue-900 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/furniture offers.jpg" alt="Beautifully Made Furniture" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Beautifully made</h2>
+                <p class="text-white mb-4">Our furniture blends enduring <br>design with functionality.</p>
+                <a href="#" class="bg-white text-blue-900 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/festive decor.jpg" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Get set for Diwali <br>with festive decor under Rs.999</h2>
+                <p class="text-white mb-4">Add a festive glow to your home.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/gift sec card.jpg" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Effortless gifting this festive <br> season with IKEA gift card</h2>
+                <p class="text-white mb-4">make gift easier with IKEA gift card.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/LOWER PRICE.avif" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">New lower price</h2>
+                <p class="text-white mb-4">Our favourite product now at a <br> reduced price.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/furniture under 3000.avif" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Furniture under Rs.2999</h2>
+                <p class="text-white mb-4">Transform your living space with our <br>affortable furniture choices.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/essentials.avif" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Everyday essentials <br> under Rs.299</h2>
+                <p class="text-white mb-4">Make the most of yours budget essentials.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/chair 750.avif" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Our lowest price <br> at IKEA </h2>
+                <p class="text-white mb-4">Shop our lowest price products.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/friday happy.webp" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Friday get better at <br> IKEA stores</h2>
+                <p class="text-white mb-4">Enjoy up to 50% off on main courses.</p>
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Arrow for Sliding -->
+
+    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700" onclick="ScrollCard()">
+        →
+    </button>
+</div>
+
+<!-- category 2-->
+<div class="container mx-auto mt-10 relative">
+    <h1 class="text-3xl font-bold mb-8">For all your needs there is IKEA</h1>
+    
+    <!-- Horizontal Scrollable Category Section -->
+    <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="category-container">
+        <!-- Category Card 1 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/diwali decor.jpg" alt="Decoration" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Decoration</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 2 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/pillow.webp" alt="Home Textiles" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Home Textiles</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 3 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/sofa 5.jpg" alt="Sofa" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Sofa</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 4 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/diwali light.jpg" alt="Lighting" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Lighting</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 5 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/serveware-white-5-c.webp" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Serveware</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/dinig set.jpg" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Dinnig set</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/rugs.jpg" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Rugs</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/cookware.webp" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Cookware</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/mammut-childrens-table-in-outdoor-white__1366677_pe957113_s5.avif" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Children's IKEA</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/storage & organisation.avif" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Storage & Organisation</p>
+            </div>
+        </div>
+        
+       
+        
+
+        <!-- Add more cards similarly -->
+    </div>
+    
+    <!-- Right Arrow Button for Sliding -->
+    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700" onclick="ScrollCat()">
+        →
+    </button>
+</div>
+
+
+<!-- whats new-->
+
+ 
+<div class="container mx-auto p-4">
+    <div class="flex">
+
+        <!-- Left Banner Section for What's New -->
+        <div class="bg-orange-600 text-white flex flex-col justify-center items-center text-center w-1/3 p-4">
+            <h2 class="text-xl font-bold mb-2">What's new at IKEA?</h2>
+            <button class="bg-white text-orange-600 font-bold py-2 px-4 rounded-full">Explore now</button>
+        </div>
+
+        <!-- Right Product Grid Section -->
+        <div class="grid grid-cols-4 gap-2 w-2/3 pl-4">
+
+            <!-- Upper Row -->
+            <div class="relative col-span-1 row-span-2">
+                <img src="images/study-lamp-electrical-cord.webp" alt="Lighting" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Lighting</div>
+            </div>
+
+            <div class="relative col-span-1">
+                <img src="images/table" alt="Tables" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Tables</div>
+            </div>
+
+            <div class="relative col-span-1">
+                <img src="images/pots-plants-pp001.avif" alt="Pots and Plants" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Pots and Plants</div>
+            </div>
+
+            <div class="relative col-span-1">
+                <img src="images/bed" alt="Beds" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Beds</div>
+            </div>
+
+            <!-- Lower Row -->
+            <div class="relative col-span-1">
+                <img src="images/sofa" alt="Sofas" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Sofas</div>
+            </div>
+
+            <div class="relative col-span-1 row-span-2">
+                <img src="images/bed" alt="Bedding" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Bedding</div>
+            </div>
+
+            <div class="relative col-span-1">
+                <img src="images/baby-children-bc001.avif" alt="Children's Room" class="w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white py-1 px-2 rounded-full text-black text-xs text-center">Children's room</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--banner-->
+    <div class="banner bg-[#7a3030] container mx-auto px-4 py-12 prelative shadow-lg flex flex-col justify-center">
+        <h3 class="text-xl font-bold mb-2 text-white text-center">
+            Shop and get a <span class="highlight text-[#FDD017]">Rs. 1,500</span> voucher* this festive season!
+        </h3>
+        <p class="text-lg text-gray-200 mb-1 text-center">
+            Offer valid for <strong class="font-semibold">IKEA Family</strong> members.
+        </p>
+        <p class="text-sm text-gray-300 text-center">
+            <small>*On purchase of Rs. 10,000 and above. Terms & conditions apply.</small>
+        </p>
+        <p class="text-sm text-gray-300 text-center">
+            <small>16th Sep - 3rd Nov 2024</small>
+        </p>
+    </div>
+    
+
+
+<!-- Collections in focus-->
+<div class="container mx-auto px-4 py-16 relative">
+
+    <section class="w-full">
+        <h1 class="text-3xl font-bold mb-4">Collections in focus</h1>
+        <p class="mb-6 text-gray-600">All ou new collection at a glance</p>  
+    <!-- Horizontal Scrollable Cards Container -->
+    <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="card-container">
+        <!-- Card 1 -->
+        <div class="w-80 h-[500px] bg-orange-500 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/add a.jpg" alt="STRANDMON Wing Chair" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Add a touch of tradition to <br> your home with <br>AROMATISK</h2>
+                
+                <a href="#" class="bg-white text-orange-500 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-80 h-[500px] bg-blue-900 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/bring.webp" alt="Beautifully Made Furniture" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Bring a warm, Welcoming <br> glow into your home with<br> HOSTAGILLE</h2>
+                
+                <a href="#" class="bg-white text-blue-900 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/pet.avif" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Life with pets just got <br>easier and cuter with <br> UTSADD</h2>
+                
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/relive.webp" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Relive the<br> iconic 80's with<br> Nytillverkad</h2>
+                
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/level.webp" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">Level up your <br>lounge game with <br>BRANNBOLL</h2>
+                
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+        <div class="w-80 h-[500px] bg-red-700 rounded-lg shadow-lg flex-shrink-0 snap-center">
+            <img src="images/see.avif" alt="Festive Decor for Diwali" class="w-full h-2/3 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-white text-xl font-bold mb-2">See <br>all<br> collections</h2>
+                
+                <a href="#" class="bg-white text-red-700 font-bold py-2 px-4 rounded-full hover:bg-gray-200">→</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Arrow for Sliding -->
+
+    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700" onclick="ScrollCard()">
+        →
+    </button>
+</div>    
+
+
+<!-- top furniture categories -->
+
+
+<div class="container mx-auto mt-10 relative">
+    <h1 class="text-3xl font-bold mb-8">Top furniture categories</h1>
+    
+    <!-- Horizontal Scrollable Category Section -->
+    <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="category-container">
+        <!-- Category Card 1 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/sofa 9.webp" alt="Decoration" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Sofa</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 2 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/brina-4-seater-solid-mango-wood-rattan-dining-set-with-chairs_1.webp" alt="Home Textiles" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Dining Sets</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 3 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/pull-out-baskets-kitchen-storage-organisation.avif" alt="Sofa" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Storage & organisation</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 4 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/667e41d3646a47097b3408c2-homfa-63-food-pantry-cabinet-4-doors.jpg" alt="Lighting" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Kitchen storage & furniture</p>
+            </div>
+        </div>
+        
+        <!-- Category Card 5 -->
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/grandeur.jpg" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Beds</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/ReactiveDualComfortOrthopaedicMediumFirmMattressRedesign1.jpg" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">mattresses</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/301161668591950.webp" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Work desks</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/64fbe85e557f08654134a677-homfa-kid-s-cubby-toy-storage-cabinet.jpg" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Children's storage & furniture</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="images/classela-ergonomic-designcushion-revolving-chair-brown-product-images-orvhmbnejku-p606423447-0-202311301452.webp" alt="Serveware" class="w-full h-3/4 object-cover">
+            <div class="h-1/4 flex items-center justify-center bg-white">
+                <p class="font-semibold">Chair</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Right Arrow Button for Sliding -->
+    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700" onclick="ScrollCat()">
+        →
+    </button>
+</div>
+
+
+<!--instagram-->
+
+<div class="container mx-auto px-4 py-8"> <!-- Div to align with other sections -->
+    <section class="w-full">
+        <h1 class="text-3xl font-bold mb-4">Looks by you</h1>
+        <p class="mb-6 text-gray-600">Ideas based on your recently viewed products</p>
+
+        <!-- Container for the horizontal scroll -->
+        <div class="relative overflow-hidden">
+            <!-- Scrollable content -->
+            <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="ig-container">
+                <!-- Image Card 1 -->
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig 1.avif" alt="image1" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <!-- Image Card 3 -->
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig 2.avif" alt="image3" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+
+                <!-- Image Card 4 -->
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig 3.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig 4.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig5.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig6.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig7.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig8.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig9.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig10.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig11.webp" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden relative">
+                    <img src="images/ig12.avif" alt="image4" class="w-full h-48 object-cover">
+                    <a href="https://instagram.com/ppom_home" target="_blank" class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-lg">
+                        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram Icon" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700" onclick="ScrollIG()">
+                →
+            </button>
+        </div>
+    </section>
+</div>
+<!-- more on ikea-->
+
+<div class="container mx-auto px-4 py-16 relative">
+    <h2 class="text-3xl font-bold mb-8">More from IKEA India</h2>
+
+    <div id="scroll-container" class="flex overflow-x-auto space-x-8 py-4 scrollbar-hide">
+        <!-- Card 1 -->
+        <div class="rounded-lg shadow-lg overflow-hidden w-48">
+            <img src="images/bussiness.avif" alt="IKEA for Business" class="w-full h-32 object-cover">
+            <div class="px-4 py-2 bg-white">
+                <div class="font-bold text-xl mb-2 text-center">IKEA for Business</div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rounded-lg shadow-lg overflow-hidden w-48">
+            <img src="images/ikea app.avif" alt="IKEA App" class="w-full h-32 object-cover">
+            <div class="px-4 py-2 bg-white">
+                <div class="font-bold text-xl mb-2 text-center">IKEA App</div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rounded-lg shadow-lg overflow-hidden w-48">
+            <img src="images/family.webp" alt="IKEA Family" class="w-full h-32 object-cover">
+            <div class="px-4 py-2 bg-white">
+                <div class="font-bold text-xl mb-2 text-center">IKEA Family</div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="rounded-lg shadow-lg overflow-hidden w-48">
+            <img src="images/ikea services.avif" alt="IKEA Services" class="w-full h-32 object-cover">
+            <div class="px-4 py-2 bg-white">
+                <div class="font-bold text-xl mb-2 text-center">IKEA Services</div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="rounded-lg shadow-lg overflow-hidden w-48">
+            <img src="images/ikea food.avif" alt="IKEA Food" class="w-full h-32 object-cover">
+            <div class="px-4 py-2 bg-white">
+                <div class="font-bold text-xl mb-2 text-center">IKEA Food</div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="rounded-lg shadow-lg overflow-hidden w-48">
+            <img src="images/ikea-foundation-logo-vector.png" alt="IKEA Foundation" class="w-full h-32 object-cover">
+            <div class="px-4 py-2 bg-white">
+                <div class="font-bold text-xl mb-2 text-center">IKEA Foundation</div>
+            </div>
+        </div>
+        
+
+        <!-- Add more cards as needed -->
+    </div>
+
+    <!-- Right Arrow for Sliding -->
+    <button 
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hover:bg-gray-700"
+        onclick="scrollMore()"
+    >
+        →
+    </button>
+</div>
+
+
+
+<!-- our services-->
+    <div class="container mx-auto py-12 relative group">
+        <h2 class="text-3xl font-bold mb-8">Discover Our Features</h2>
+
+        <div class="flex space-x-4 overflow-x-auto whitespace-nowrap snap-x snap-mandatory" id="feature_section-container">
+            <!-- Example Feature Cards -->
+            <div class="bg-blue-500 rounded-lg p-8 text-center text-white">
+                <h3 class="text-2xl font-bold mb-2">All Features</h3>
+                <a href="#" class="inline-block px-4 py-2 rounded-full bg-blue-700 hover:bg-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <img src="images/fast-delivery.svg" alt="Fast Delivery" class="h-12 w-12 mx-auto mb-4">
+                <h3 class="text-lg font-bold mb-2">Home Delivery<br> starts @Rs. 49*</h3>
+            </div>
+
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <img src="images/c.jpg" alt="Click & Collect" class="h-12 w-12 mx-auto mb-4">
+                <h3 class="text-lg font-bold mb-2">Click & collect</h3>
+            </div>
+
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <img src="images/man-with-shopping.svg" alt="Personal Shopper" class="h-12 w-12 mx-auto mb-4">
+                <h3 class="text-lg font-bold mb-2">Personal shopper</h3>
+            </div>
+    
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="images/interior.png" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v1m-10 10a2 2 0 01-2 2m7-2a2 2 0 01-2-2m7-2a2 2 0 01-2-2m-3-1H18a2 2 0 012-2h-5a2 2 0 01-2-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </img>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Interior design service</h3>
+                
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="images/measuring.png" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v1m-10 10a2 2 0 01-2 2m7-2a2 2 0 01-2-2m7-2a2 2 0 01-2-2m-3-1H18a2 2 0 012-2h-5a2 2 0 01-2-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </img>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Measuring service</h3>
+                
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="images/kitchen planning.png" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v1m-10 10a2 2 0 01-2 2m7-2a2 2 0 01-2-2m7-2a2 2 0 01-2-2m-3-1H18a2 2 0 012-2h-5a2 2 0 01-2-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </img>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Kitchen planning</h3>
+                
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="images/assembly.png" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v1m-10 10a2 2 0 01-2 2m7-2a2 2 0 01-2-2m7-2a2 2 0 01-2-2m-3-1H18a2 2 0 012-2h-5a2 2 0 01-2-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </img>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Assembly</h3>
+                
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="images/Installation.png" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v1m-10 10a2 2 0 01-2 2m7-2a2 2 0 01-2-2m7-2a2 2 0 01-2-2m-3-1H18a2 2 0 012-2h-5a2 2 0 01-2-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </img>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Installation</h3>
+                
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-md text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="images/Design your room.png" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v1m-10 10a2 2 0 01-2 2m7-2a2 2 0 01-2-2m7-2a2 2 0 01-2-2m-3-1H18a2 2 0 012-2h-5a2 2 0 01-2-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </img>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Design your room</h3>
+                
+            </div>
+
+        </div>
+      
+      <!-- Left Arrow Button -->
+      <button id="move-left" class="slide-button absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hidden hover:bg-gray-700">
+        ←
+    </button>
+
+    <!-- Right Arrow Button -->
+    <button id="move-right" class="slide-button absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-4 rounded-full hidden hover:bg-gray-700">
+        →
+    </button>
+    </div>
+
+<!-- picture gallery-->
+
+      <!-- Container for the section -->
+      <section class="container mx-auto py-12 relative">
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold mb-8 text-left">More ideas and inspiration</h2>
+
+        <!-- Filter menu -->
+        <div class="flex flex-wrap justify-left space-x-4 mb-8">
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none active" data-filter="all">All</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="bedroom">Bedroom</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="living-room">Living Room</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="kitchen">Kitchen</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Workspace</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Outdoor</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Bathroom</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Baby-and-children room</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Dining</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Hallway</button>
+            <button class="filter-btn border-2 border-black px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none" data-filter="workspace">Laundry</button>
+        </div>
+
+        <!-- All Galleries (default view, visible by default) -->
+        <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-filter="all">
+            <div class="relative">
+                <img src="images/all 1.avif" alt="Image 1" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="images/all 2.avif" alt="Image 2" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="images/all 3.avif" alt="Image 3" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="images/all 4.avif" alt="Image 3" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="images/all 5.avif" alt="Image 3" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="images/all 6.avif" alt="Image 3" class="w-full h-full object-cover rounded-md">
+            </div>
+        </div>
+
+        <!-- Bedroom Gallery -->
+        <div class="gallery hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-filter="bedroom">
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Bedroom+1" alt="Bedroom 1" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Bedroom+2" alt="Bedroom 2" class="w-full h-full object-cover rounded-md">
+            </div>
+        </div>
+
+        <!-- Living Room Gallery -->
+        <div class="gallery hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-filter="living-room">
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Living+Room+1" alt="Living Room 1" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Living+Room+2" alt="Living Room 2" class="w-full h-full object-cover rounded-md">
+            </div>
+        </div>
+
+        <!-- Kitchen Gallery -->
+        <div class="gallery hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-filter="kitchen">
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Kitchen+1" alt="Kitchen 1" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Kitchen+2" alt="Kitchen 2" class="w-full h-full object-cover rounded-md">
+            </div>
+        </div>
+
+        <!-- Workspace Gallery -->
+        <div class="gallery hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-filter="workspace">
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Workspace+1" alt="Workspace 1" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="relative">
+                <img src="https://via.placeholder.com/300x400?text=Workspace+2" alt="Workspace 2" class="w-full h-full object-cover rounded-md">
+            </div>
+        </div> 
+
+<!-- context-->
+
+    <div class="container mx-auto py-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Explore our furniture & home furnishing range</h2>
+    <p class="text-lg text-gray-600 mb-6">IKEA is a global leader in life at home.</p>
+    <p class="text-gray-600 mb-4">Whether you just moved into a new home or looking to revamp your current one, we at IKEA are here to inspire you with affordable home furniture solutions, there is a piece of furniture to every corner of your home. Create a home that is perfect for you.</p>
+    <p class="text-gray-600 mb-4">Shopping at IKEA is a bit different and exciting compared to your shopping at an everyday retail. It is about experiencing solutions first hand and getting to know ideas and inspirations that can fit perfectly into your home. That's why, we offer more than 7500 products, solutions at our store along with home furnishing ideas and services for you to explore.</p>
+    <p class="text-gray-600 mb-4">When you visit IKEA store, make yourself at home in our many room settings in the store. Squeeze the upholsteries, feel the oriental rugs, try the sofa beds and open the cabinets to feel the quality. On the price tag, you'll find all you need to know about a product, including where in the store you can pick it up.</p>
+    <p class="text-gray-600 mb-4">Since most IKEA furniture is flat-packed, they are quite easy to bring home when you buy from the store.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white shadow-md rounded overflow-hidden">
+            <img src="images/living room.jpg" alt="Furniture Image" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Living Room</h3>
+                <p class="text-gray-600">Explore our range of living room furniture, including sofas, armchairs, coffee tables, TV units, and more.</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded overflow-hidden">
+            <img src="images/bedroom.jpg" alt="Furniture Image" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Bedroom</h3>
+                <p class="text-gray-600">Discover our range of bedroom furniture, including beds, mattresses, wardrobes, dressers, and more.</p>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded overflow-hidden">
+            <img src="images/kitchen.jpg" alt="Furniture Image" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Kitchen</h3>
+                <p class="text-gray-600">Explore our range of kitchen furniture, including kitchen cabinets, countertops, sinks, faucets, and more.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+<!-- Aplio Family Content Section -->
+<section class="text-center bg-white container mx-auto py-12">
+    <h2 class="text-2xl font-bold">IKEA Family</h2>
+    <p class="text-lg mb-5">Enjoy guaranteed discounts on a select range of products. Not a member yet? Join for free.</p>
+    <a href="#" class="inline-block px-5 py-2.5 bg-black text-white rounded-md hover:bg-gray-800">Join IKEA Family</a>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer class="bg-white container mx-auto py-12 font-sans">
+    <div class="flex flex-wrap justify-between">
+      <div class="w-48 mb-5">
+        <h3 class="text-lg font-bold mb-2 text-black">Join IKEA Family</h3>
+        <p class="text-sm text-gray-700">Enjoy member-only discounts, offers, early access to APLIO sales, and more. Join for free.</p>
+        <a href="#" class="inline-block bg-black text-white px-4 py-2.5 rounded-md font-bold mt-2 hover:bg-gray-800">Join the club</a>
+      </div>
+  
+      <div class="w-48 mb-5">
+        <h3 class="text-lg font-bold mb-2 text-black">IKEA Business Network</h3>
+        <p class="text-sm text-gray-700">Join the membership program for business customers with exciting benefits and features. Enjoy member discounts and tutorials.</p>
+        <a href="#" class="inline-block bg-black text-white px-4 py-2.5 rounded-md font-bold mt-2 hover:bg-gray-800">Join now</a>
+      </div>
+  
+      <div class="w-48 mb-5">
+        <h4 class="text-lg font-bold mb-2 text-black">IKEA Family</h4>
+        <ul class="list-none p-0">
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Log in</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Join IKEA Family</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Member offers</a></li>
+          <li><a href="#" class="text-gray-800 hover:underline">Workshops & Events</a></li>
+        </ul>
+      </div>
+  
+      <div class="w-48 mb-5">
+        <h4 class="text-lg font-bold mb-2 text-black">Services</h4>
+        <ul class="list-none p-0">
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Delivery Service</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Click & collect</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Personal shopper</a></li>
+          <li><a href="#" class="text-gray-800 hover:underline">Design your room</a></li>
+        </ul>
+      </div>
+  
+      <div class="w-48 mb-5">
+        <h4 class="text-lg font-bold mb-2 text-black">Help</h4>
+        <ul class="list-none p-0">
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">How to shop</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Return policy</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Prices and price tags</a></li>
+          <li><a href="#" class="text-gray-800 hover:underline">Contact us</a></li>
+        </ul>
+      </div>
+  
+      <div class="w-48 mb-5">
+        <h4 class="text-lg font-bold mb-2 text-black">About IKEA</h4>
+        <ul class="list-none p-0">
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">This is IKEA</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Careers at IKEA</a></li>
+          <li class="mb-1"><a href="#" class="text-gray-800 hover:underline">Sustainability</a></li>
+          <li><a href="#" class="text-gray-800 hover:underline">IKEA Stores</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="flex justify-between mt-10">
+      <div class="text-gray-800 text-2xl">
+        <a href="#" class="mr-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="mr-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="mr-2"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+  
+      <div class="text-sm text-gray-500">
+        <p>&copy; IKEA Systems B.V. 2000-2024</p>
+        <a href="#" class="text-gray-500 hover:underline">Privacy Policy</a> | 
+        <a href="#" class="text-gray-500 hover:underline">Cookie Policy</a> | 
+        <a href="#" class="text-gray-500 hover:underline">Terms and Conditions</a>
+      </div>
+    </div>
+  </footer>
+ 
+   
+    <script src="script.js"> </script>
+    <script src="feature.js"></script>
+    
+
+</body>
+</html>
